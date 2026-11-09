@@ -1,0 +1,5 @@
+# Ignore the extracted dataset
+dataset/
+
+# Keep DVC tracking file
+!dataset.dvc
