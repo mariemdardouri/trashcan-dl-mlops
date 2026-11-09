@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset: managed by DVC
+# Dataset
+data/raw/dataset/
+data/raw/**/*.jpg
+data/raw/**/*.jpeg
+data/raw/**/*.png
+
+# Processed data: managed by DVC
+data/processed/
+
+# Models: managed by DVC
+models/
+
+# MLflow local files
+mlruns/
+mlartifacts/
+mlflow.db
+
+# Environment variables
+.env
+
+# IDE
+.idea/
+
+# Temporary files
+*.log
