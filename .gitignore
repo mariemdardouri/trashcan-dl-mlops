@@ -16,6 +16,11 @@ data/raw/**/*.jpg
 data/raw/**/*.jpeg
 data/raw/**/*.png
 
+
+# DVC local credentials and cache
+.dvc/config.local
+.dvc/cache/
+
 # Processed data: managed by DVC
 data/processed/
 
