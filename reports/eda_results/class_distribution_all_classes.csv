@@ -1,0 +1,17 @@
+﻿class_name,Train objects,Val objects,Total objects,Train images,Val images,Total images,Object share (%)
+animal_crab,247,62,309,146,40,186,2.5
+animal_eel,267,76,343,185,74,259,2.78
+animal_etc,180,55,235,176,45,221,1.9
+animal_fish,611,153,764,543,101,644,6.19
+animal_shells,171,78,249,99,40,139,2.02
+animal_starfish,274,124,398,87,47,134,3.23
+plant,405,102,507,384,98,482,4.11
+rov,2653,664,3317,2241,480,2721,26.89
+trash_etc,1630,409,2039,1439,301,1740,16.53
+trash_fabric,247,67,314,213,56,269,2.55
+trash_fishing_gear,127,69,196,110,57,167,1.59
+trash_metal,901,225,1126,879,214,1093,9.13
+trash_paper,154,39,193,129,38,167,1.56
+trash_plastic,1490,374,1864,1412,341,1753,15.11
+trash_rubber,113,29,142,113,29,142,1.15
+trash_wood,271,69,340,257,67,324,2.76

@@ -40,3 +40,10 @@ mlflow.db
 
 # Temporary files
 *.log
+
+runs/
+*.pt
+
+# Local testing scripts (optional)
+gpu_test.py
+test_mlflow_databricks.py

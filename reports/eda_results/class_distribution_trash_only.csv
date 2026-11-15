@@ -1,0 +1,9 @@
+﻿class_name,Train objects,Val objects,Total objects,Train images,Val images,Total images,Object share (%)
+trash_etc,1630,409,2039,1439,301,1740,16.53
+trash_plastic,1490,374,1864,1412,341,1753,15.11
+trash_metal,901,225,1126,879,214,1093,9.13
+trash_wood,271,69,340,257,67,324,2.76
+trash_fabric,247,67,314,213,56,269,2.55
+trash_fishing_gear,127,69,196,110,57,167,1.59
+trash_paper,154,39,193,129,38,167,1.56
+trash_rubber,113,29,142,113,29,142,1.15
