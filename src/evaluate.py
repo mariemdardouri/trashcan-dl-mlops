@@ -91,7 +91,7 @@ def main():
 
     with open(csv_path, "w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
-        writer.writerow(["Actual / Predicted"] + class_names)
+        writer.writerow(["Predicted / Actual"] + class_names)
 
         for i, row in enumerate(confusion_matrix):
             writer.writerow([class_names[i]] + list(row))

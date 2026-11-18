@@ -1,0 +1,27 @@
+
+experiment_name: exp2_oversampling
+
+model:
+  pretrained: yolo11n.pt
+
+training:
+  epochs: 50
+  imgsz: 640
+  batch: 8
+  device: 0
+  workers: 4
+  patience: 15
+  seed: 42
+
+dataset:
+  original: data/processed/trashcan_yolo
+  experiment: data/experiments/exp2_oversampling
+
+oversampling:
+  enabled: true
+  target: 400
+  classes:
+    - trash_fabric
+    - trash_paper
+    - trash_fishing_gear
+    - trash_rubber
