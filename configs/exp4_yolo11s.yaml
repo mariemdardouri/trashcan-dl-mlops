@@ -1,0 +1,17 @@
+
+experiment_name: exp4_yolo11s
+
+model:
+  pretrained: yolo11s.pt
+
+training:
+  epochs: 50
+  imgsz: 640
+  batch: 4
+  device: 0
+  workers: 4
+  patience: 15
+  seed: 42
+
+dataset:
+  path: data/processed/trashcan_yolo/data.yaml

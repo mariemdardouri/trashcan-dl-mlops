@@ -25,6 +25,10 @@ MODEL_PATHS = {
     "exp3": (
         ROOT_DIR / "runs" / "detect" /
         "trashcan_yolo11n_exp3_augmentation-2" / "weights" / "best.pt"
+    ),
+    "exp4": (
+        ROOT_DIR / "runs" / "detect" /
+        "trashcan_yolo11s_exp4" / "weights" / "best.pt"
     )
 }
 
@@ -161,7 +165,7 @@ def main():
 
     parser.add_argument(
         "--model",
-        choices=["baseline", "exp2", "exp3", "all"],
+        choices=["baseline", "exp2", "exp3", "exp4", "all"],
         required=True,
         help="Choose the model to evaluate"
     )
@@ -169,7 +173,7 @@ def main():
     args = parser.parse_args()
 
     if args.model == "all":
-        for model_name in ["baseline", "exp2", "exp3"]:
+        for model_name in ["baseline", "exp2", "exp3", "exp4"]:
             evaluate_model(model_name)
     else:
         evaluate_model(args.model)
