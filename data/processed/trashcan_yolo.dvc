@@ -1,0 +1,6 @@
+outs:
+- md5: 791461fea3cc325f76f8685345f3b35a.dir
+  size: 156185342
+  nfiles: 12965
+  hash: md5
+  path: trashcan_yolo

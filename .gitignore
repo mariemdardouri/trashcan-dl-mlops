@@ -22,8 +22,8 @@ data/raw/**/*.png
 .dvc/cache/
 
 # Processed data: managed by DVC
-data/processed/
-
+data/processed/*
+!data/processed/*.dvc
 # Models: managed by DVC
 models/
 

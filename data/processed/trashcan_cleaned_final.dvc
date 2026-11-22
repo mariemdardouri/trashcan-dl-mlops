@@ -1,0 +1,6 @@
+outs:
+- md5: bb355a8a6336fd4fd0b9c982f23435c1.dir
+  size: 176850441
+  nfiles: 6490
+  hash: md5
+  path: trashcan_cleaned_final
