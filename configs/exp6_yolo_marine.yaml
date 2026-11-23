@@ -1,0 +1,58 @@
+experiment:
+  name: exp6_yolo_marine
+  seed: 42
+
+dataset:
+  # Source non modifiée, conservée dans le dépôt/DVC
+  source_dir: data/processed/trashcan_yolo
+  # Copie de travail augmentée, générée automatiquement et non committée
+  work_dir: outputs/datasets/exp6_yolo_marine
+
+architecture:
+  repository_dir: external/yolo-marine
+  model_yaml: external/yolo-marine/ultralytics/cfg/models/11/my_yolo11_MixStructure.yaml
+  pretrained_weights: yolo11n.pt
+
+augmentation:
+  rare_classes:
+    1: trash_fabric
+    2: trash_fishing_gear
+    4: trash_paper
+    6: trash_rubber
+  variants_per_image: 2
+  min_frame_gap: 10
+  seed: 42
+
+training:
+  epochs: 50
+  imgsz: 640
+  batch: 8
+  workers: 2
+  device: 0
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  weight_decay: 0.0005
+  cos_lr: true
+  patience: 12
+  amp: false
+  cache: false
+  deterministic: true
+  hsv_h: 0.015
+  hsv_s: 0.25
+  hsv_v: 0.20
+  degrees: 3
+  translate: 0.08
+  scale: 0.30
+  fliplr: 0.5
+  flipud: 0.0
+  mosaic: 0.5
+  mixup: 0.0
+  close_mosaic: 10
+  save_period: 5
+
+output:
+  project: outputs/train
+  name: exp6_yolo_marine
+  evaluation_project: outputs/evaluation
+  evaluation_name: exp6_evaluation
