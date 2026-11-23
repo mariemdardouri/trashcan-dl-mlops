@@ -1,0 +1,28 @@
+experiment_name: exp6_combined_oversampling_augmentation
+
+model:
+  pretrained: yolo11n.pt
+
+training:
+  epochs: 100
+  imgsz: 640
+  batch: 8
+  device: 0
+  workers: 4
+  patience: 20
+  seed: 42
+
+dataset:
+  path: data/experiments/exp2_oversampling/data.yaml
+
+augmentation:
+  hsv_h: 0.025
+  hsv_s: 0.5
+  hsv_v: 0.5
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  fliplr: 0.5
+  flipud: 0.0
+  mosaic: 0.5
+  mixup: 0.0
