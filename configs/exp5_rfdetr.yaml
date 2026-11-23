@@ -1,0 +1,40 @@
+experiment:
+  name: exp5_rfdetr_small
+  description: RF-DETR Small on the TrashCan 8-class dataset
+
+dataset:
+  # Source YOLO dataset: images/train, labels/train, images/val, labels/val
+  source_dir: data/processed/trashcan_yolo
+  # RF-DETR directory prepared by prepare_exp5_dataset.py; generated, not committed
+  work_dir: outputs/datasets/exp5_rfdetr
+
+model:
+  name: RFDETRSmall
+
+training:
+  # Values below match the actual optimized train_exp5.py cell in the notebook.
+  epochs: 12
+  batch_size: 8
+  grad_accum_steps: 2
+  lr: 0.0001
+  num_workers: 2
+  amp_dtype: fp16
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 2
+  scale_jitter: true
+  augmentation_backend: cpu
+  eval_interval: 2
+  early_stopping: true
+  early_stopping_patience: 6
+  early_stopping_min_delta: 0.001
+  checkpoint_interval: 5
+  seed: 42
+  tensorboard: false
+  wandb: false
+  mlflow: false
+  clearml: false
+  log_per_class_metrics: false
+
+output:
+  directory: outputs/train/exp5_rfdetr_small
